@@ -141,7 +141,7 @@ def main():
     
     #risolvo sudoku con minisat
     sat_output = 'sat_sudoku_solution.txt'
-    os.system(f"minisat {out_file} {sat_output}")
+    os.system(f"minisat -verb=2 {out_file} {sat_output}")
     
     #Decodifico e stampo a file
     decode_output(sat_output, n)
